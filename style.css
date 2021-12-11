@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+.formInputs {
+    margin: 10px;
+}
+
+#submitButton {
+    margin: 10px;
+}
