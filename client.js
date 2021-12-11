@@ -14,6 +14,9 @@ function onReady() {
     
 }
 
+// function to call 'createEmployeeObject' after gathering 
+// info from input fields and the pushing the new employee 
+// object to the employeeArray
 function submitEmployeeInfo(event) {
     console.log('this is:', $(this));
     console.log('event', event);
@@ -26,10 +29,16 @@ function submitEmployeeInfo(event) {
     // push the new employee to the array
     employeesArray.push(newEmployee);
     console.log('All employees:', employeesArray);
+
+    // empty form fields
+    $('.formInputs').val('');
+
+    // show employee objects in the table on the DOM
+    addEmployeesToTable();
     
-} 
+} //end submitEmployeeInfo
 
-
+// function to create employee objects
 function createEmployeeObject() {
     // declare employee object
     let employee = {
@@ -40,4 +49,24 @@ function createEmployeeObject() {
         annualSalary: Number($('#annualSalaryInput').val())
     };
     return employee;
+} //end createEmployeeObject
+
+function addEmployeesToTable() {
+
+    // empty table to start
+    $('#employeeList').empty();
+
+    // loop through employeeArray to display info to table on the DOM
+    for (let employee of employeesArray) {
+        $('#employeeList').append(`
+            <tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.idNumber}</td>
+                <td>${employee.jobTitle}</td>
+                <td>${employee.annualSalary}</td>
+                <td><button class="deleteEmployee">Delete</button></td>
+            <tr>
+        `);
+    }
 }
