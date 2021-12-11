@@ -39,8 +39,20 @@ function submitEmployeeInfo(event) {
     // get employee annual salary totals
     let annualSalaryTotal = sumAnnualSalaries();
 
+    // empty annualNumber field
+    $('#annualNumber').empty();
+
     // display annualSalaryTotal to DOM
     $('#annualNumber').append(annualSalaryTotal.toFixed(2));
+
+    // empty monthly number field
+    $('#monthlyNumber').empty();
+    
+    // get monthly salary total
+    let monthlySalaryTotal = calculateTotalMonthlySalaries();
+
+    // Display monthly salary totals to the DOM
+    $('#monthlyNumber').append(monthlySalaryTotal.toFixed(2));
     
 } //end submitEmployeeInfo
 
@@ -87,7 +99,12 @@ function sumAnnualSalaries() {
 
 
 
-function calculateTotalMonthlySalaries(annualSalaryTotal) {
+function calculateTotalMonthlySalaries() {
+    let annualSalaryTotal = sumAnnualSalaries();
     let monthlySalaryTotal = 0;
     monthlySalaryTotal = annualSalaryTotal / 12;
+    if (monthlySalaryTotal>20000) {
+        $('#monthlySalaryTotal').css('background-color', 'red');
+    } // end if
+    return monthlySalaryTotal;
 }
