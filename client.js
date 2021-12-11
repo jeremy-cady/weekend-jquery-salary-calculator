@@ -35,6 +35,12 @@ function submitEmployeeInfo(event) {
 
     // show employee objects in the table on the DOM
     addEmployeesToTable();
+
+    // get employee annual salary totals
+    let annualSalaryTotal = sumAnnualSalaries();
+
+    // display annualSalaryTotal to DOM
+    $('#annualNumber').append(annualSalaryTotal.toFixed(2));
     
 } //end submitEmployeeInfo
 
@@ -69,4 +75,19 @@ function addEmployeesToTable() {
             <tr>
         `);
     }
+}
+
+function sumAnnualSalaries() {
+    let annualSalaryTotal = 0;
+    for (employee of employeesArray) {
+        annualSalaryTotal += employee.annualSalary;
+    }
+    return annualSalaryTotal;
+}
+
+
+
+function calculateTotalMonthlySalaries(annualSalaryTotal) {
+    let monthlySalaryTotal = 0;
+    monthlySalaryTotal = annualSalaryTotal / 12;
 }

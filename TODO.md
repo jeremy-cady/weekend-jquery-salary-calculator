@@ -1,17 +1,17 @@
 
 [ ] Base Mode
-    [ ] Input form that collects:
-        [ ] employee first name
-        [ ] last name
-        [ ] ID number
-        [ ] job title
-        [ ] annual salary
+    [x] Input form that collects:
+        [x] employee first name
+        [x] last name
+        [x] ID number
+        [x] job title
+        [x] annual salary
 
     [ ] Submit button that should:
-        [ ] collect the form information
+        [x] collect the form information
         [ ] store the information to calculate monthly costs
         [ ] append the information to the DOM
-        [ ] clear the input fields
+        [x] clear the input fields
 
     [ ] IF the total monthly cost exceedss $20k:
         [ ] add a red background color to the total monthly cost
