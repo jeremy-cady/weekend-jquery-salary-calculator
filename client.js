@@ -11,6 +11,9 @@ function onReady() {
 
     // Listener for the submit button
     $('#submitButton').on('click', submitEmployeeInfo);
+
+    // Listener for delete buttons
+    $(document).on('click', '.deleteEmployee', deleteEmployeeInfo);
     
 }
 
@@ -47,7 +50,7 @@ function submitEmployeeInfo(event) {
 
     // empty monthly number field
     $('#monthlyNumber').empty();
-    
+
     // get monthly salary total
     let monthlySalaryTotal = calculateTotalMonthlySalaries();
 
@@ -107,4 +110,12 @@ function calculateTotalMonthlySalaries() {
         $('#monthlySalaryTotal').css('background-color', 'red');
     } // end if
     return monthlySalaryTotal;
+}
+
+function deleteEmployeeInfo(event) {
+    console.log('delete button clicked');
+    $(this).closest('tr').remove();
+    console.log('employee info deleted');
+    
+    
 }

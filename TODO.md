@@ -1,5 +1,5 @@
 
-[ ] Base Mode
+[x] Base Mode
     [x] Input form that collects:
         [x] employee first name
         [x] last name
@@ -7,16 +7,16 @@
         [x] job title
         [x] annual salary
 
-    [ ] Submit button that should:
+    [x] Submit button that should:
         [x] collect the form information
-        [ ] store the information to calculate monthly costs
-        [ ] append the information to the DOM
+        [x] store the information to calculate monthly costs
+        [x] append the information to the DOM
         [x] clear the input fields
 
-    [ ] IF the total monthly cost exceedss $20k:
-        [ ] add a red background color to the total monthly cost
+    [x] IF the total monthly cost exceedss $20k:
+        [x] add a red background color to the total monthly cost
 
-    [ ] Create a delete button for each employee that removes that employee from the DOM
+    [x] Create a delete button for each employee that removes that employee from the DOM
 
 [ ] STRETCH
     [ ] Add styling or extra functionality tgat fits with the theme
