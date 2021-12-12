@@ -21,6 +21,9 @@ function onReady() {
 // info from input fields and the pushing the new employee 
 // object to the employeeArray
 function submitEmployeeInfo(event) {
+    // Prevent form from causing page reload
+    event.preventDefault();
+
     console.log('this is:', $(this));
     console.log('event', event);
 
