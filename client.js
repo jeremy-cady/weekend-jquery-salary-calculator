@@ -59,6 +59,8 @@ function submitEmployeeInfo(event) {
     
 } //end submitEmployeeInfo
 
+
+
 // function to create employee objects
 function createEmployeeObject() {
     // declare employee object
@@ -72,6 +74,9 @@ function createEmployeeObject() {
     return employee;
 } //end createEmployeeObject
 
+
+
+// function to append employee objects to the DOM
 function addEmployeesToTable() {
 
     // empty table to start
@@ -90,18 +95,20 @@ function addEmployeesToTable() {
             <tr>
         `);
     }
-}
+} // end addEmployeesToTable
 
+
+// function to sum all employee annual salaries
 function sumAnnualSalaries() {
     let annualSalaryTotal = 0;
     for (employee of employeesArray) {
         annualSalaryTotal += employee.annualSalary;
     }
     return annualSalaryTotal;
-}
+}// end sumAnnualSalaries
 
 
-
+// function to calculate total monthly salaries
 function calculateTotalMonthlySalaries() {
     let annualSalaryTotal = sumAnnualSalaries();
     let monthlySalaryTotal = 0;
@@ -110,12 +117,13 @@ function calculateTotalMonthlySalaries() {
         $('#monthlySalaryTotal').css('background-color', 'red');
     } // end if
     return monthlySalaryTotal;
-}
+} // end calculateTotalMonthlySalaries
 
+
+
+// function to delete employee data from the DOM
 function deleteEmployeeInfo(event) {
     console.log('delete button clicked');
     $(this).closest('tr').remove();
     console.log('employee info deleted');
-    
-    
-}
+} //end deleteEmployeeInfo

@@ -1,31 +1,66 @@
 body {
+    background-color: black;
+}
+
+.topEmpty {
+    height: 100px;
+    background-color: black;
+    margin: 0px;
+}
+
+
+.title {
     text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
+    
+}
+
+#employeeForm {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 0px;
 }
 
 .formInputs {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #submitButton {
-    margin: 10px;
-}
-
-.employeeDataTable {
-    margin: 0 auto;
+    width: 100px
 }
 
 .salaryTotals {
-    margin-top: 80px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding-top: 100px;
 }
 
 #annualSalaryTotal {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 200px;
+    margin-right: 80px;
 }
 
 #monthlySalaryTotal {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 80px;
+    margin-right: 200px;
+}
+
+.empty {
+    background-color: black;
+    height: 1200px;
+    margin: 0px;
+}
+
+table.table-dark.table-hover {
+    margin: 0px;
 }

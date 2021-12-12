@@ -19,7 +19,7 @@
     [x] Create a delete button for each employee that removes that employee from the DOM
 
 [ ] STRETCH
-    [ ] Add styling or extra functionality tgat fits with the theme
+    [ ] Add styling or extra functionality that fits with the theme
     [ ] when an employee is deleted:
         [ ] update total monthly cost
 
